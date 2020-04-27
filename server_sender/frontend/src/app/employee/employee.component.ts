@@ -9,10 +9,10 @@ import IEmployee from "../entity/Employss";
 })
 export class EmployeeComponent implements OnInit {
   employeeList: IEmployee[];
-  empId: number = 123;
-  empName: string = "Mahesh Pandekar";
-  empAge: number = 23;
-  empSalary: number = 23232;
+  empId: number = null;
+  empName: string = "";
+  empAge: number = null;
+  empSalary: number = null;
 
   constructor(private _empService: EmployeeService) {}
 
