@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center font-weight-bold">Add Employee</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-right">Employee ID: </p>
+        </div>
+        <div class="col-md-4">
+          <input type="number" [(ngModel)] ="empId" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-right">Employee Name: </p>
+        </div>
+        <div class="col-md-4">
+          <input type="text" [(ngModel)]="empName" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-right">Employee Age: </p>
+        </div>
+        <div class="col-md-4">
+          <input type="number" [(ngModel)]="empAge" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-right">Employee Salary: </p>
+        </div>
+        <div class="col-md-4">
+          <input type="number" [(ngModel)]="empSalary" />
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-2 text-right">
+          <button class="btn btn-danger" (click)="clearForm()">Clear</button>
+        </div>
+        <div class="col-md-2 text-right">
+          <button class="btn btn-primary" (click)="submitEmployeeRecord()">Create</button>
+        </div>
+        <div class="col-md-3 text-right">
+          <button class="btn btn-primary" (click)="submitAndSendEmployeeRecord()">Create & Sync</button>
+        </div>
+        <div class="col-md-4 text-left">
+          <button class="btn btn-primary" (click)="sendUnsyncEmployeeRecord()">Sync all unuploaded</button>
+        </div>
+      </div>
+      <br><br>
+    </div>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center font-weight-bold">Employee List</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Emp ID</th>
+                <th>Emp Name</th>
+                <th>Emp Age</th>
+                <th>Emp Salary</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let emp of employeeList" class="font-weight-normal">
+                <td>{{emp.empId}}</td>
+                <td>{{emp.empName}}</td>
+                <td>{{emp.empAge}}</td>
+                <td>{{emp.empSalary}}</td>
+                <td>{{emp.isSync ? 'Uploaded' : 'New'}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

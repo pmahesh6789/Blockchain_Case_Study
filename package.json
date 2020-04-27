@@ -1,0 +1,21 @@
+{
+  "name": "blockchain_case_study",
+  "version": "1.0.0",
+  "description": "Server to server data communication by blockchain.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mahesh Pandekar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "crypto-js": "^4.0.0",
+    "http": "0.0.1-security",
+    "sockjs": "^0.3.20"
+  }
+}
